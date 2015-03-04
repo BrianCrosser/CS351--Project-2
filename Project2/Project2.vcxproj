@@ -68,6 +68,7 @@
     <ClInclude Include="instruction.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="instruction.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

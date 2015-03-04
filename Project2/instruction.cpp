@@ -96,6 +96,65 @@ bitset<26> Instruction::jmp_offset()
 
 string Instruction::to_string()
 {
-	string x = bits.to_string();
+    string x = bits.to_string();
+    string instr;
+    
+    // ADD instruction
+    if (funct() == 10100){
+        instr = "ADD";
+    }
+    // ADDI instruction
+    if (opcode() == 01000){
+        instr = "ADDI";
+    }
+    // ADDU instruction
+    if (funct() == 10101){
+        instr = "ADDU";
+    }
+    // ADDIU instruction
+    if (opcode() == 01001){
+        instr = "ADDIU";
+    }
+    // SUB instruction
+    if (funct() == 10110){
+        instr = "SUB";
+    }
+    // SUBU instruction
+    if (funct() == 10111){
+        instr = "SUBU";
+    }
+    // LUI instuction
+    if (opcode() == 01111){
+        instr = "SUBU";
+    }
+    // AND instruction
+    if (funct() == 11000){
+        instr = "AND";
+    }
+    // ANDI instruction
+    if (opcode() == 01100){
+        instr = "ANDI";
+    }
+    // NOR instruction
+    if (funct() == 11011){
+        instr = "NOR";
+    }
+    // OR instruction
+    if (funct() == 11001){
+        instr = "OR";
+    }
+    // ORI instruction
+    if (opcode() == 01101){
+        instr = "ORI";
+    }
+    // SLL instruction
+    if (funct() == 00000){
+        instr = "SLL";
+    }
+    // SRL instuction
+    if (opcode() == 00010){
+        instr = "SRL";
+    }
+
 	return x;
 }

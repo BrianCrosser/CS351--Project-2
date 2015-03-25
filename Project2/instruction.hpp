@@ -31,7 +31,11 @@ class Instruction {
 
         // String representation (in assembly)
         string to_string();
-
+        string rformat1();
+        string rformat2();
+        string iformat1();
+        string iformat2();
+        string jformat();
 
     private:
         bitset<WORD_SIZE> bits;
